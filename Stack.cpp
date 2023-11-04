@@ -3,15 +3,16 @@ using namespace std;
 #define kill(X) return void(cout << (X) << '\n');
 namespace DataStructure
 {
+    template <class V>
     class Stack
     {
     public:
         int Mx_size, size = 0;
-        vector<int> arr;
+        vector<V> arr;
         Stack(int siz)
         {
             this->Mx_size = siz;
-            arr = vector<int>(siz, -1);
+            arr = vector<V>(siz, -1);
         };
 
     private:
@@ -30,7 +31,7 @@ namespace DataStructure
 
         int Size() { return size; }
 
-        int Top() //
+        V Top() //
         {
             if (!is_empty())
             {
@@ -45,13 +46,14 @@ namespace DataStructure
             }
         }
 
-        void Push(int x)
+        void Push(V x)
         {
             if (!is_full())
             {
                 arr[size++] = x;
             }
         }
+
         void display()
         {
             if (is_empty())
@@ -67,7 +69,9 @@ namespace DataStructure
         }
     };
 }
+
 using namespace DataStructure;
+
 int main()
 {
     // st.empty();  // return boolean value.
