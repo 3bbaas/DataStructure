@@ -113,5 +113,6 @@ int main() {
         cout << introQ;
     }
 #endif //_Q
+
     return 0;
 }
