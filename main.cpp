@@ -1,6 +1,5 @@
 #include<iostream>
 #include"CircularQueue.h"
-
 using namespace std;
 
 int n;
@@ -12,7 +11,12 @@ bool ok() {
     return false;
 }
 
-string intro = R"(
+
+
+int main() {
+//#define _cq
+#ifdef _cq
+    string introCQ = R"(
 ===============
 1-> EnQ
 2-> DeQ
@@ -22,11 +26,9 @@ string intro = R"(
 6-> clear
 ===============
 )";
-
-int main() {
     CQ cq{};
     CreateCQ(&cq);
-    cout << intro;
+    cout << introCQ;
     int q;
     while (ok()) {
         if (n == 1)
@@ -41,8 +43,9 @@ int main() {
             cout << (isEmpty(&cq) ? "Q is empty" : "Q not empty");
         else if (n == 6)
             clear(&cq);
-        cout << intro;
+        cout << introCQ;
     }
+#endif //_cq
 
     return 0;
 }
