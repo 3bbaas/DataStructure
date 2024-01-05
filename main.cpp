@@ -2,7 +2,7 @@
 //#include"CircularQueue.h"
 //#include"Stack.h"
 //#include "LinkedQueue.h"
-#include "DoublyLinkedlist/DoublyLinkedlist.h"
+//#include "DoublyLinkedlist/DoublyLinkedlist.h"
 using namespace std;
 
 int n;
