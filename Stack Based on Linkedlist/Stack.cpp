@@ -32,3 +32,30 @@ void display() {
     }
     std::cout << ptr->data << "]\n";
 }
+
+void search(int _item) {
+    if (top == nullptr)return void(std::cout << "Stack is empty!");
+    Node *ptr = top;
+    while (ptr->next != nullptr) {
+        if (_item == ptr->data)
+            return void(std::cout << "Item is here" << ptr->data << '\n');
+        ptr = ptr->next;
+    }
+    std::cout << "Not Found\n";
+}
+
+void count() {
+    int counter = 0;
+    if (top == nullptr)return void(std::cout << "Stack is empty!");
+    Node *ptr = top;
+    while (ptr->next != nullptr) {
+        counter++;
+        ptr = ptr->next;
+    }
+    std::cout << "Count of items is " << counter << '\n';
+}
+
+int Top() {
+    if (top == nullptr)return std::cout << "Stack is empty!", 0;
+    return std::cout << "Top stack is " << top->data << '\n', top->data;
+}

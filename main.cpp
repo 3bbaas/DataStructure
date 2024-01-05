@@ -49,19 +49,19 @@ int main() {
 #endif //_cq
 
 
-#define _st
+//#define _st
 #ifdef _st
     string introSt = R"(
 ===============
 1-> push
 2-> pop
 3-> display
-4-> isFull
-5-> isEmpty
-6-> clear
+4-> search
+5-> count
+6-> Top
 ===============
 )";
-    Node node{};
+
     cout << introSt;
     int q;
     while (ok(4)) {
@@ -71,14 +71,16 @@ int main() {
             pop();
         else if (n == 3)
             display();
-//        else if (n == 4)
-//            cout << (isFull(&cq) ? "Q is full" : "Q not full");
-//        else if (n == 5)
-//            cout << (isEmpty(&cq) ? "Q is empty" : "Q not empty");
-//        else if (n == 6)
-//            clear(&cq);
+        else if (n == 4)
+            cin >> q, search(q);
+        else if (n == 5)
+            count();
+        else if (n == 6)
+            Top();
         cout << introSt;
     }
 #endif //_st
+
+
     return 0;
 }
