@@ -1,7 +1,6 @@
 #include "CircularQueue.h"
 #include <iostream>
 
-void CreateCQ(CQ *cq) { cq->front = cq->rear = -1; }
 
 bool isFull(CQ *cq) {
     return cq->rear == (cq->front - 1) % (MaxSize - 1)

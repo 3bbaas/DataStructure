@@ -7,6 +7,7 @@ class CQ {
 public:
     int front, rear;
     int entry[MaxSize];
+    CQ(){front = rear = -1;}
 };
 
 void CreateCQ(CQ *cq);

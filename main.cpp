@@ -27,7 +27,6 @@ int main() {
 ===============
 )";
     CQ cq{};
-    CreateCQ(&cq);
     cout << introCQ;
     int q;
     while (ok()) {
