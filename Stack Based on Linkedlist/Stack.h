@@ -2,10 +2,20 @@
 #define st_
 
 
-class Stack {
+class Node {
 public:
+    int data;
+    Node *next;
 
+    Node() { data = 0, next = nullptr; }
 };
 
+
+
+void push(int _item);
+
+void pop();
+
+void display();
 
 #endif //st_
