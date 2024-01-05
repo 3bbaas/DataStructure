@@ -1,8 +1,8 @@
 #include<iostream>
 //#include"CircularQueue.h"
 //#include"Stack.h"
-#include "LinkedQueue.h"
-
+//#include "LinkedQueue.h"
+#include "DoublyLinkedlist/DoublyLinkedlist.h"
 using namespace std;
 
 int n;
@@ -82,7 +82,7 @@ int main() {
     }
 #endif //_st
 
-#define _Q
+//#define _Q
 #ifdef _Q
     string introQ = R"(
 ===============
