@@ -1,6 +1,7 @@
 #include<iostream>
-#include"CircularQueue.h"
-#include"Stack.h"
+//#include"CircularQueue.h"
+//#include"Stack.h"
+#include "LinkedQueue.h"
 
 using namespace std;
 
@@ -64,7 +65,7 @@ int main() {
 
     cout << introSt;
     int q;
-    while (ok(4)) {
+    while (ok(6)) {
         if (n == 1)
             cin >> q, push(q);
         else if (n == 2)
@@ -81,6 +82,36 @@ int main() {
     }
 #endif //_st
 
+#define _Q
+#ifdef _Q
+    string introQ = R"(
+===============
+1-> enQ
+2-> deQ
+3-> display
+4-> search
+5-> count
+6-> Top
+===============
+)";
 
+    cout << introQ;
+    int q;
+    while (ok(5)) {
+        if (n == 1)
+            cin >> q, enQ(q);
+        else if (n == 2)
+            deQ();
+        else if (n == 3)
+            displayQ();
+//        else if (n == 4)
+//            cin >> q, search(q);
+        else if (n == 5)
+            countQ();
+//        else if (n == 6)
+//            Top();
+        cout << introQ;
+    }
+#endif //_Q
     return 0;
 }
