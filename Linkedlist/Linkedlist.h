@@ -2,8 +2,14 @@
 #define list
 
 
-class Linkedlist {
+class Node_ {public:
+    int data;
+    Node_ *next;
 
+    Node_() {
+        data = 0;
+        next = nullptr;
+    }
 };
 
 

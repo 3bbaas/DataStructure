@@ -1,5 +1,8 @@
-//
-// Created by Abbas on 1/6/2024.
-//
-
+#include<iostream>
 #include "Linkedlist.h"
+
+class Linkedlist {
+public:
+    Node_ *Head = nullptr;
+
+};
