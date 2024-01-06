@@ -18,7 +18,8 @@ void enQ(int _item) {
 }
 
 void deQ() {
-    if (head == nullptr) { return void(std::cout << "Queue is empty!"); }
+    if (head == nullptr) {
+        return void(std::cout << "Queue is empty!"); }
     NodeQ *temp = head;
     std::cout << "Item " << temp->data << " is enQueued!\n";
     head = head->next;
@@ -40,7 +41,8 @@ void displayQ() {
     NodeQ *ptr = head;
     std::cout << "Queue [";
     while (ptr->next != nullptr) {
-        if (ptr->next == rear)return void(std::cout << ptr->data << ", " << ptr->next->data << "]\n");
+        if (ptr->next == rear)
+            return void(std::cout << ptr->data << ", " << ptr->next->data << "]\n");
         std::cout << ptr->data << ", ";
         ptr = ptr->next;
     }
